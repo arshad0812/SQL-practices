@@ -1,2 +1,2 @@
 -- select colum starts with particular letter
-SELECT * FROM DEMOTABLE WHERE NAME LIKE 'A%';
+SELECT * FROM table2 WHERE NAME LIKE 'A%';
