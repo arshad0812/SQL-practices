@@ -6,4 +6,4 @@ select * from table1;
 insert into table1 values('arshad',1,'erode');
 
 
-truncate table table1;
+truncate table table2;

@@ -9,6 +9,6 @@ select * from table2;
 insert into table2 values('snw',6,"none")
 
 
-SELECT NAME FROM table2 WHERE NAME REGEXP '^[^aeiou]';
+SELECT NAME FROM table2 WHERE NAME  REGEXP '^[^aeiou]';
 
-SELECT NAME FROM table2 WHERE NAME  not REGEXP '[aeiou]';
+SELECT NAME FROM table2 WHERE NAME REGEXP '^[^aeiou]';
