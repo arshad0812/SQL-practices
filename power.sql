@@ -1,0 +1,1 @@
+select power(2,2);
