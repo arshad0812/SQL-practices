@@ -1,7 +1,7 @@
 use SQLPRACTICE;
 
 
-select * from table2;
+select * from table3;
 
 
-SELECT * FROM table2 WHERE NAME LIKE '%i_' and name like 'a%';
+SELECT * FROM table3 WHERE NAME LIKE '%h' and name like 'a%';
