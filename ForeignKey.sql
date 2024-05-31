@@ -1,22 +1,56 @@
--- Active: 1713227079263@@127.0.0.1@3306@sqlpractice
+
+-- Foreign key
+create table fk1(
+    id int PRIMARY KEY,
+    name varchar(10)
+)
 
 
-create table foreignKey1(
-    name varchar(10),
-    id int
-);
+create table fk2(
+    id int,
+    salary int,
+    foreign key(id) REFERENCES fk1(id)
+)
 
 
-create table foreignKey2(
-    email VARCHAR(10) PRIMARY KEY,
-    address VARCHAR(10)
-);
+insert into fk1 values(3,"Abi");
 
 
-select * from foreignkey1;
+select * from fk1;
+
+select * from fk2;
 
 
-select * from foreignkey2;
+insert into fk2 values(1,10000);
+
+delete from fk2 where id=1;
 
 
-alter table foreignkey1 add FOREIGN KEY(email) REFERENCES foreignkey2(email);
+-- Foreign key with on delete cascade
+
+create table fk3(
+    id int PRIMARY KEY,
+    name varchar(10)
+)
+
+
+create table fk4(
+    id int,
+    salary int,
+    foreign key(id) REFERENCES fk3(id) on delete cascade
+)
+
+
+
+select * from fk3;
+
+select * from fk4;
+
+
+insert into fk4 values(2,20000);
+
+-- Deleting the record on foreign key table delete the record on actual table
+delete from fk3 where id=2;
+
+
+
